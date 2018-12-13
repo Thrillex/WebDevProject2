@@ -1,6 +1,15 @@
 <!DOCTYPE html>
 <html>
   <head>
+    
+    <!-- Load React. -->
+    <!-- Note: when deploying, replace "development.js" with "production.min.js". -->
+    <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
+
+    <!-- Load our React component. -->
+    <script src="like_button.js"></script>
+
     <meta charset="UTF-8">
     <title>Weather Data</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.16/p5.min.js"></script>
@@ -22,12 +31,20 @@
   
     <body id="skies" background="clouds.webp"> 
 
+        <!-- ... existing HTML ... -->
+
+        <div id="like_button_container">
+              Like
+        </div>
+
+        <!-- ... existing HTML ... -->
+
       <h1>Todays Weather Update</h1>
 
        <p>Please enter the location you would like know the weather for.</p>
        <p style="color: yellow">Test London for Rain Change Background, Canada for snow, Florida for clouds!</p>
 
-       <p>Location (State or City): <input id = "city" value="London"></input></p>
+       <p>Location (State or City): <input id = "city" value="London"></input></p>  <!-- needs work watch video 6 & 9 -->
      
        <p><button id ="submit" onclick="weatherAsk()">submit</button></p>
        <br/>
@@ -37,7 +54,7 @@
        <p id="maxt">Maximum Temperature for today</p>
        <p id="mint">Minimum Temperature for today</p>
          -->
-        <p id="results">
+        <p id="results">  <!-- needs work watch video 5 & 6 and 9 for refs -->
           <ol id="list">
             <p id="temp">Temperature</p>
             <p id="humid">Humidity</p>
